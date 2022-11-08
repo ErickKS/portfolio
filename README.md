@@ -5,7 +5,7 @@
 <br>
 
 <h3 align="center">
-  <img src="./.github/readme-gif.gif" alt="project gif" height="500px">
+  <img src="./.github/readme-gif.gif" alt="project gif">
   <br>
-  <a href="">live demo</a>
+  <a href="https://erick-kuwahara.netlify.app/">live demo</a>
 </h3>
