@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Erick Kuwahara" />
+    <meta name="description" content="My personal portfolio" />
+    <title>Erick Kuwahara</title>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FAVICON -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../images/favicon/site.webmanifest" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div id="particles-js"></div>
+
+      <nav>
+        <div class="container">
+          <div class="nav__logo">
+            <a href="./pt-br.html">E<span>.K</span></a>
+          </div>
+
+          <div id="navigation">
+            <button id="btnMobile">
+              <span id="hamburger"></span>
+            </button>
+
+            <ul class="menu">
+              <li><a href="#about">Sobre</a></li>
+              <li><a href="#projects">Projetos</a></li>
+              <li><a href="#contact">Contato</a></li>
+
+              <li>
+                <a id="dropA">
+                  Idiomas
+                  <svg
+                    width="20"
+                    height="20"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="m6 9 6 6 6-6"></path>
+                  </svg>
+                </a>
+                <ul id="dropUl">
+                  <li><a href="../index.html">Inglês</a></li>
+                  <li><a href="./" class="active">Português</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <div class="nav__cv">
+                  <a
+                    href="https://drive.google.com/file/d/1M4MDmY1R2ZBM_MIEZ_ChryasSvzpIIvz/view?usp=sharing"
+                    target="_blank"
+                    class="linkBtn"
+                  >
+                    Cv
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="nav__cv">
+            <a
+              href="https://drive.google.com/file/d/1M4MDmY1R2ZBM_MIEZ_ChryasSvzpIIvz/view?usp=sharing"
+              target="_blank"
+              class="linkBtn"
+            >
+              Cv
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="banner">
+        <div class="container">
+          <span>Olá, meu nome é</span>
+          <h1>Erick Kuwahara</h1>
+          <h1>Sou Desenvolvedor Front End.</h1>
+          <a href="#about" class="linkBtn">Sobre mim</a>
+        </div>
+      </div>
+
+      <div class="mouse-animation" id="mouse">
+        <a href="#about"><span class="dot"></span></a>
+      </div>
+    </header>
+
+    <!-- SOCIAL -->
+    <div class="social media">
+      <div class="container">
+        <ul>
+          <li>
+            <a href="https://github.com/ErickKS" target="_blank">
+              <svg
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.25 22.5v-3.865a3.361 3.361 0 0 0-.94-2.607c3.14-.35 6.44-1.538 6.44-6.99a5.43 5.43 0 0 0-1.5-3.746 5.058 5.058 0 0 0-.09-3.765s-1.18-.35-3.91 1.478a13.397 13.397 0 0 0-7 0C6.52 1.177 5.34 1.527 5.34 1.527a5.058 5.058 0 0 0-.09 3.765 5.43 5.43 0 0 0-1.5 3.775c0 5.413 3.3 6.602 6.44 6.991a3.366 3.366 0 0 0-.94 2.577V22.5"
+                ></path>
+                <path d="M9.25 19.503c-5 1.498-5-2.496-7-2.996"></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/erick-kuwahara/"
+              target="_blank"
+            >
+              <svg
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                ></path>
+                <path d="M2 9h4v12H2z"></path>
+                <path d="M4 2a2 2 0 1 0 0 4 2 2 0 1 0 0-4z"></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:erick.kuwahara79@gmail.com">
+              <svg
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                ></path>
+                <path d="m22 6-10 7L2 6"></path>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="social language">
+      <div class="container">
+        <ul>
+          <li>
+            <a href="./pt-br.html" class="active" title="Portuguese"> pt </a>
+          </li>
+          <li>
+            <a href="../index.html" title="English"> en </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="about__box">
+          <div class="about__img">
+            <img src="../images/profile.jpg" alt="profile image" />
+            <div class="border__top"></div>
+            <div class="border__bottom"></div>
+          </div>
+
+          <div class="about__txt">
+            <h2>Sobre</h2>
+            <p>
+              Me chamo Erick Kuwahara da Silva, tenho 18 anos e sou de São Paulo
+              - BR, conheci a área da programação durante a pandemia do COVID-19
+              e cada dia venho me admirando mais por esse "mundo".
+            </p>
+            <p>
+              Venho, desde então, aprofundando meus estudos constantemente com
+              foco principal no Front End, sempre visando uma boa experiência
+              para os usuários.
+            </p>
+            <p>
+              Caso queira saber um pouquinho mais sobre mim, dê uma olhada no
+              meu
+              <a
+                href="https://drive.google.com/file/d/1M4MDmY1R2ZBM_MIEZ_ChryasSvzpIIvz/view?usp=sharing"
+                target="_blank"
+              >
+                Cv
+              </a>
+              .
+            </p>
+
+            <div class="about__txt__painel">
+              <div class="painel__display">
+                <div class="painel__tittle">
+                  <button data-id="technologies" class="painel__btn active">
+                    Skills
+                  </button>
+                </div>
+                <div class="painel__tittle">
+                  <button data-id="experience" class="painel__btn">
+                    Experiência
+                  </button>
+                </div>
+              </div>
+
+              <div class="painel__content">
+                <div id="technologies" class="painel__content__box active">
+                  <ul>
+                    <li>
+                      <svg
+                        width="20"
+                        height="20"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="m9 18 6-6-6-6"></path>
+                      </svg>
+                      <p>Html</p>
+                    </li>
+                    <li>
+                      <svg
+                        width="20"
+                        height="20"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="m9 18 6-6-6-6"></path>
+                      </svg>
+                      <p>Css</p>
+                    </li>
+                    <li>
+                      <svg
+                        width="20"
+                        height="20"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="m9 18 6-6-6-6"></path>
+                      </svg>
+                      <p>Tailwindcss</p>
+                    </li>
+                    <li>
+                      <svg
+                        width="20"
+                        height="20"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="m9 18 6-6-6-6"></path>
+                      </svg>
+                      <p>JavaScript</p>
+                    </li>
+                    <li>
+                      <svg
+                        width="20"
+                        height="20"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="m9 18 6-6-6-6"></path>
+                      </svg>
+                      <p>React</p>
+                    </li>
+                    <li>
+                      <svg
+                        width="20"
+                        height="20"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="m9 18 6-6-6-6"></path>
+                      </svg>
+                      <p>TypeScript</p>
+                    </li>
+                    <li>
+                      <svg
+                        width="20"
+                        height="20"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="m9 18 6-6-6-6"></path>
+                      </svg>
+                      <p>Git & GitHub</p>
+                    </li>
+                  </ul>
+                </div>
+
+                <div id="experience" class="painel__content__box">
+                  <ul>
+                    <li>
+                      <svg
+                        width="20"
+                        height="20"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="m9 18 6-6-6-6"></path>
+                      </svg>
+                      <p>Procurando minha primeira experiência profissional!</p>
+                      <br />
+                      <p class="highlight">Quem sabe na sua empresa?</p>
+                      <br />
+                      <p class="highlight">
+                        Estou disponível para conversar, entre em
+                        <a href="#contact">contato</a> comigo.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container">
+        <div class="project__tittle">
+          <h2>Meus Projetos</h2>
+        </div>
+
+        <div class="project__box">
+          <div class="project__single">
+            <div class="project__image">
+              <img src="../images/project-01.png" alt="project image" />
+            </div>
+            <div class="project__header">
+              <div>
+                <h3>Sync</h3>
+                <span>website</span>
+              </div>
+              <div>
+                <a
+                  href="https://github.com/ErickKS/sync"
+                  target="_blank"
+                  title="Repository"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16.25 22.5v-3.865a3.361 3.361 0 0 0-.94-2.607c3.14-.35 6.44-1.538 6.44-6.99a5.43 5.43 0 0 0-1.5-3.746 5.058 5.058 0 0 0-.09-3.765s-1.18-.35-3.91 1.478a13.397 13.397 0 0 0-7 0C6.52 1.177 5.34 1.527 5.34 1.527a5.058 5.058 0 0 0-.09 3.765 5.43 5.43 0 0 0-1.5 3.775c0 5.413 3.3 6.602 6.44 6.991a3.366 3.366 0 0 0-.94 2.577V22.5"
+                    ></path>
+                    <path d="M9.25 19.503c-5 1.498-5-2.496-7-2.996"></path>
+                  </svg>
+                </a>
+                <a
+                  href="https://erickks.github.io/sync/"
+                  target="_blank"
+                  title="Live demo"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <path d="M12 9a3 3 0 1 0 0 6 3 3 0 1 0 0-6z"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project__description">
+              <span>
+                Tecnologias:<br />
+                HTML, CSS e JavaScript
+              </span>
+            </div>
+          </div>
+
+          <div class="project__single">
+            <div class="project__image">
+              <img src="../images/project-02.png" alt="project image" />
+            </div>
+            <div class="project__header">
+              <div>
+                <h3>Aria Business</h3>
+                <span>website</span>
+              </div>
+              <div>
+                <a
+                  href="https://github.com/ErickKS/aria-business"
+                  target="_blank"
+                  title="Repository"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16.25 22.5v-3.865a3.361 3.361 0 0 0-.94-2.607c3.14-.35 6.44-1.538 6.44-6.99a5.43 5.43 0 0 0-1.5-3.746 5.058 5.058 0 0 0-.09-3.765s-1.18-.35-3.91 1.478a13.397 13.397 0 0 0-7 0C6.52 1.177 5.34 1.527 5.34 1.527a5.058 5.058 0 0 0-.09 3.765 5.43 5.43 0 0 0-1.5 3.775c0 5.413 3.3 6.602 6.44 6.991a3.366 3.366 0 0 0-.94 2.577V22.5"
+                    ></path>
+                    <path d="M9.25 19.503c-5 1.498-5-2.496-7-2.996"></path>
+                  </svg>
+                </a>
+                <a
+                  href="https://erickks.github.io/aria-business/"
+                  target="_blank"
+                  title="Live demo"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <path d="M12 9a3 3 0 1 0 0 6 3 3 0 1 0 0-6z"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project__description">
+              <span>
+                Tecnologias:<br />
+                HTML, CSS e JavaScript
+              </span>
+            </div>
+          </div>
+
+          <div class="project__single">
+            <div class="project__image">
+              <img src="../images/project-03.png" alt="project image" />
+            </div>
+            <div class="project__header">
+              <div>
+                <h3>Aplicativo de Clima</h3>
+                <span>projeto lógico</span>
+              </div>
+              <div>
+                <a
+                  href="https://github.com/ErickKS/weather-app"
+                  target="_blank"
+                  title="Repository"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16.25 22.5v-3.865a3.361 3.361 0 0 0-.94-2.607c3.14-.35 6.44-1.538 6.44-6.99a5.43 5.43 0 0 0-1.5-3.746 5.058 5.058 0 0 0-.09-3.765s-1.18-.35-3.91 1.478a13.397 13.397 0 0 0-7 0C6.52 1.177 5.34 1.527 5.34 1.527a5.058 5.058 0 0 0-.09 3.765 5.43 5.43 0 0 0-1.5 3.775c0 5.413 3.3 6.602 6.44 6.991a3.366 3.366 0 0 0-.94 2.577V22.5"
+                    ></path>
+                    <path d="M9.25 19.503c-5 1.498-5-2.496-7-2.996"></path>
+                  </svg>
+                </a>
+                <a
+                  href="https://erickks.github.io/weather-app/"
+                  target="_blank"
+                  title="Live demo"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <path d="M12 9a3 3 0 1 0 0 6 3 3 0 1 0 0-6z"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project__description">
+              <span>
+                Tecnologias:<br />
+                HTML, CSS, JavaScript e fetch API
+              </span>
+            </div>
+          </div>
+
+          <div class="project__single">
+            <div class="project__image">
+              <img src="../images/project-04.png" alt="project image" />
+            </div>
+            <div class="project__header">
+              <div>
+                <h3>Quiz</h3>
+                <span>projeto lógico</span>
+              </div>
+              <div>
+                <a
+                  href="https://github.com/ErickKS/quiz"
+                  target="_blank"
+                  title="Repository"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16.25 22.5v-3.865a3.361 3.361 0 0 0-.94-2.607c3.14-.35 6.44-1.538 6.44-6.99a5.43 5.43 0 0 0-1.5-3.746 5.058 5.058 0 0 0-.09-3.765s-1.18-.35-3.91 1.478a13.397 13.397 0 0 0-7 0C6.52 1.177 5.34 1.527 5.34 1.527a5.058 5.058 0 0 0-.09 3.765 5.43 5.43 0 0 0-1.5 3.775c0 5.413 3.3 6.602 6.44 6.991a3.366 3.366 0 0 0-.94 2.577V22.5"
+                    ></path>
+                    <path d="M9.25 19.503c-5 1.498-5-2.496-7-2.996"></path>
+                  </svg>
+                </a>
+                <a
+                  href="https://erickks.github.io/quiz/"
+                  target="_blank"
+                  title="Live demo"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <path d="M12 9a3 3 0 1 0 0 6 3 3 0 1 0 0-6z"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project__description">
+              <span>
+                Tecnologias:<br />
+                HTML, CSS e JavaScript
+              </span>
+            </div>
+          </div>
+
+          <div class="project__single">
+            <div class="project__image">
+              <img src="../images/project-05.png" alt="project image" />
+            </div>
+            <div class="project__header">
+              <div>
+                <h3>Calculadora</h3>
+                <span>projeto lógico</span>
+              </div>
+              <div>
+                <a
+                  href="https://github.com/ErickKS/calculator"
+                  target="_blank"
+                  title="Repository"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16.25 22.5v-3.865a3.361 3.361 0 0 0-.94-2.607c3.14-.35 6.44-1.538 6.44-6.99a5.43 5.43 0 0 0-1.5-3.746 5.058 5.058 0 0 0-.09-3.765s-1.18-.35-3.91 1.478a13.397 13.397 0 0 0-7 0C6.52 1.177 5.34 1.527 5.34 1.527a5.058 5.058 0 0 0-.09 3.765 5.43 5.43 0 0 0-1.5 3.775c0 5.413 3.3 6.602 6.44 6.991a3.366 3.366 0 0 0-.94 2.577V22.5"
+                    ></path>
+                    <path d="M9.25 19.503c-5 1.498-5-2.496-7-2.996"></path>
+                  </svg>
+                </a>
+                <a
+                  href="https://erickks.github.io/calculator/"
+                  target="_blank"
+                  title="Live demo"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <path d="M12 9a3 3 0 1 0 0 6 3 3 0 1 0 0-6z"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project__description">
+              <span>
+                Tecnologias:<br />
+                HTML, CSS e JavaScript
+              </span>
+            </div>
+          </div>
+
+          <div class="project__single">
+            <div class="project__image">
+              <img src="../images/project-06.png" alt="project image" />
+            </div>
+            <div class="project__header">
+              <div>
+                <h3>Pomodoro Timer</h3>
+                <span>projeto lógico</span>
+              </div>
+              <div>
+                <a
+                  href="https://github.com/ErickKS/pomodoro-timer"
+                  target="_blank"
+                  title="Repository"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16.25 22.5v-3.865a3.361 3.361 0 0 0-.94-2.607c3.14-.35 6.44-1.538 6.44-6.99a5.43 5.43 0 0 0-1.5-3.746 5.058 5.058 0 0 0-.09-3.765s-1.18-.35-3.91 1.478a13.397 13.397 0 0 0-7 0C6.52 1.177 5.34 1.527 5.34 1.527a5.058 5.058 0 0 0-.09 3.765 5.43 5.43 0 0 0-1.5 3.775c0 5.413 3.3 6.602 6.44 6.991a3.366 3.366 0 0 0-.94 2.577V22.5"
+                    ></path>
+                    <path d="M9.25 19.503c-5 1.498-5-2.496-7-2.996"></path>
+                  </svg>
+                </a>
+                <a
+                  href="https://erickks.github.io/pomodoro-timer/"
+                  target="_blank"
+                  title="Live demo"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <path d="M12 9a3 3 0 1 0 0 6 3 3 0 1 0 0-6z"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project__description">
+              <span>
+                Tecnologias:<br />
+                HTML, CSS e JavaScript
+              </span>
+            </div>
+          </div>
+
+          <div class="project__single">
+            <div class="project__image">
+              <img src="../images/project-07.png" alt="project image" />
+            </div>
+            <div class="project__header">
+              <div>
+                <h3>Lista de Tarefas</h3>
+                <span>projeto lógico</span>
+              </div>
+              <div>
+                <a
+                  href="https://github.com/ErickKS/to-do-list-react"
+                  target="_blank"
+                  title="Repository"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16.25 22.5v-3.865a3.361 3.361 0 0 0-.94-2.607c3.14-.35 6.44-1.538 6.44-6.99a5.43 5.43 0 0 0-1.5-3.746 5.058 5.058 0 0 0-.09-3.765s-1.18-.35-3.91 1.478a13.397 13.397 0 0 0-7 0C6.52 1.177 5.34 1.527 5.34 1.527a5.058 5.058 0 0 0-.09 3.765 5.43 5.43 0 0 0-1.5 3.775c0 5.413 3.3 6.602 6.44 6.991a3.366 3.366 0 0 0-.94 2.577V22.5"
+                    ></path>
+                    <path d="M9.25 19.503c-5 1.498-5-2.496-7-2.996"></path>
+                  </svg>
+                </a>
+                <a
+                  href="https://erickks.github.io/to-do-list-react/"
+                  target="_blank"
+                  title="Live demo"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <path d="M12 9a3 3 0 1 0 0 6 3 3 0 1 0 0-6z"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project__description">
+              <span>
+                Tecnologias:<br />
+                React and TypeScript
+              </span>
+            </div>
+          </div>
+
+          <div class="project__single">
+            <div class="project__image">
+              <img src="../images/project-08.png" alt="project image" />
+            </div>
+            <div class="project__header">
+              <div>
+                <h3>Formulário Multi Step</h3>
+                <span>projeto lógico</span>
+              </div>
+              <div>
+                <a
+                  href="https://github.com/ErickKS/multi-step-form-react"
+                  target="_blank"
+                  title="Repository"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16.25 22.5v-3.865a3.361 3.361 0 0 0-.94-2.607c3.14-.35 6.44-1.538 6.44-6.99a5.43 5.43 0 0 0-1.5-3.746 5.058 5.058 0 0 0-.09-3.765s-1.18-.35-3.91 1.478a13.397 13.397 0 0 0-7 0C6.52 1.177 5.34 1.527 5.34 1.527a5.058 5.058 0 0 0-.09 3.765 5.43 5.43 0 0 0-1.5 3.775c0 5.413 3.3 6.602 6.44 6.991a3.366 3.366 0 0 0-.94 2.577V22.5"
+                    ></path>
+                    <path d="M9.25 19.503c-5 1.498-5-2.496-7-2.996"></path>
+                  </svg>
+                </a>
+                <a
+                  href="https://erickks.github.io/multi-step-form-react/"
+                  target="_blank"
+                  title="Live demo"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <path d="M12 9a3 3 0 1 0 0 6 3 3 0 1 0 0-6z"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project__description">
+              <span>
+                Tecnologias:<br />
+                React and TypeScript
+              </span>
+            </div>
+          </div>
+
+          <div class="project__single">
+            <div class="project__image">
+              <img src="../images/project-09.png" alt="project image" />
+            </div>
+            <div class="project__header">
+              <div>
+                <h3>Dashboard</h3>
+                <span>interface</span>
+              </div>
+              <div>
+                <a
+                  href="https://github.com/ErickKS/dashboard-react"
+                  target="_blank"
+                  title="Repository"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16.25 22.5v-3.865a3.361 3.361 0 0 0-.94-2.607c3.14-.35 6.44-1.538 6.44-6.99a5.43 5.43 0 0 0-1.5-3.746 5.058 5.058 0 0 0-.09-3.765s-1.18-.35-3.91 1.478a13.397 13.397 0 0 0-7 0C6.52 1.177 5.34 1.527 5.34 1.527a5.058 5.058 0 0 0-.09 3.765 5.43 5.43 0 0 0-1.5 3.775c0 5.413 3.3 6.602 6.44 6.991a3.366 3.366 0 0 0-.94 2.577V22.5"
+                    ></path>
+                    <path d="M9.25 19.503c-5 1.498-5-2.496-7-2.996"></path>
+                  </svg>
+                </a>
+                <a
+                  href="https://erickks.github.io/dashboard-react/"
+                  target="_blank"
+                  title="Live demo"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <path d="M12 9a3 3 0 1 0 0 6 3 3 0 1 0 0-6z"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project__description">
+              <span>
+                Tecnologias:<br />
+                React and TypeScript
+              </span>
+            </div>
+          </div>
+
+          <div class="project__single">
+            <div class="project__image">
+              <img src="../images/gear.png" alt="project image" />
+            </div>
+            <div class="project__header">
+              <div>
+                <h3>Em breve ...</h3>
+                <span>interface</span>
+              </div>
+            </div>
+            <div class="project__description">
+              <span>
+                Tecnologias:<br />
+                React and TypeScript
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <p>
+          Veja mais de meus projetos no meu
+          <a href="https://github.com/ErickKS?tab=repositories" target="_blank">
+            GitHub
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact__tittle">
+          <h2>Entre em contato</h2>
+        </div>
+        <div class="contact__box">
+          <h3>Interessado em me contratar?</h3>
+          <span>Vamos conversar!</span>
+
+          <div class="contact__links">
+            <a
+              href="https://www.linkedin.com/in/erick-kuwahara/"
+              target="_blank"
+              class="linkBtn"
+            >
+              LinkedIn
+            </a>
+            <a href="mailto:erick.kuwahara79@gmail.com" class="linkBtn">
+              Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <p>
+          Desenvolvido por Erick Kuwahara <span>|</span> © Todos os direitos
+          reservados
+        </p>
+      </div>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script src="../js/particlesJS/particles.js"></script>
+    <script src="../js/particlesJS/app.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
