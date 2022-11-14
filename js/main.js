@@ -47,12 +47,14 @@ for (const navLink of document.querySelectorAll(".navLink")) {
   });
 }
 
-// NAV ANIMATION
+// NAV ANIMATION && MOUSE SCROLL ANIMATION (banner)
 
-window.addEventListener("scroll", onScroll);
+window.onscroll = () => {
+  onScrollNavAnimation();
+  toggleMouseStyle();
+};
 
-onScroll();
-function onScroll() {
+function onScrollNavAnimation() {
   activateMenuCurrentSection(about);
   activateMenuCurrentSection(projects);
   activateMenuCurrentSection(contact);
@@ -80,21 +82,15 @@ function activateMenuCurrentSection(section) {
   }
 }
 
-// MOUSE SCROLL ANIMATION (banner)
-
 const mouse = document.getElementById("mouse");
 
-(function () {
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 400) {
-      mouse.style.opacity = "0";
-      mouse.style.visibility = "hidden";
-    } else {
-      mouse.style.opacity = "1";
-      mouse.style.visibility = "visible";
-    }
-  });
-});
+function toggleMouseStyle() {
+  if (window.scrollY > 400) {
+    mouse.style.cssText = "opacity:0;" + "visibility:hidden;";
+  } else {
+    mouse.style.cssText = "opacity:1;" + "visibility:visible;";
+  }
+}
 
 // ABOUT ANIMATION
 
