@@ -56,6 +56,7 @@ window.onscroll = () => {
 
 function onScrollNavAnimation() {
   activateMenuCurrentSection(about);
+  activateMenuCurrentSection(experiences);
   activateMenuCurrentSection(projects);
   activateMenuCurrentSection(contact);
 }
@@ -92,25 +93,33 @@ function toggleMouseStyle() {
   }
 }
 
-// ABOUT ANIMATION
+// PROJECTS ANIMATION
 
-const aboutBox = document.querySelector(".about__txt__painel");
-const aboutBtn = document.querySelectorAll(".painel__btn");
-const aboutContent = document.querySelectorAll(".painel__content__box");
+const projectTrigger = document.querySelectorAll(".project__trigger");
+const project = document.querySelectorAll(".project__single");
 
-aboutBox.addEventListener("click", (e) => {
-  const aboutId = e.target.dataset.id;
-  const element = document.getElementById(aboutId);
-  if (aboutId) {
-    aboutBtn.forEach((btn) => {
-      btn.classList.remove("active");
-      e.target.classList.add("active");
+function filter(category, items) {
+  items.forEach((item) => {
+    const isItemFiltered = !item.classList.contains(category);
+    const isShowAll = category === "all";
+
+    if (isItemFiltered && !isShowAll) {
+      item.classList.add("hide");
+    } else {
+      item.classList.remove("hide");
+    }
+  });
+}
+
+projectTrigger.forEach((button) => {
+  button.addEventListener("click", () => {
+    projectTrigger.forEach((disableButton) => {
+      disableButton.classList.remove("active");
     });
+    button.classList.add("active");
 
-    aboutContent.forEach((aboutContent) => {
-      aboutContent.classList.remove("active");
-    });
-
-    element.classList.add("active");
-  }
+    const currentCategory = button.dataset.filter;
+    console.log(currentCategory);
+    filter(currentCategory, project);
+  });
 });

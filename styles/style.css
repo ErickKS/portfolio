@@ -4,33 +4,50 @@
 
   --primary: hsl(41, 100%, 47%);
   --secondary: hsl(28, 100%, 44%);
-  --tertiary: hsl(0, 0%, 5%);
-  --quaternary: hsl(0, 0%, 7%);
+  --tertiary: hsl(231, 28%, 5%);
+  --quaternary: hsl(227, 23%, 8%);
   --extra: hsl(225, 31%, 74%);
 
   --btn-hover: hsla(28, 100%, 44%, 0.15);
 
   --font-primary: hsl(225, 67%, 88%);
-  --font-secondary: hsl(225, 20%, 61%);
+  --font-secondary: hsl(205, 13%, 67%);
+}
 
-  --family-sans: "Open Sans", sans-serif;
-  --family-mono: "Roboto Mono", sans-serif;
-
-  --radius: 0.8rem;
+@font-face {
+  font-family: Ubuntu;
+  src: local(Ubuntu), url(./font/Ubuntu-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: Ubuntu;
+  src: local(Ubuntu), url(./font/Ubuntu-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: Ubuntu;
+  src: local(Ubuntu), url(./font/Ubuntu-Bold.ttf);
+  font-weight: 700;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html,
 body {
   height: 100%;
-  font-size: 1.6rem;
   scroll-behavior: smooth;
   background-color: var(--tertiary);
+  font-size: 1.6rem;
+}
+
+body * {
+  font-family: "Ubuntu", sans-serif;
 }
 
 .container {
@@ -40,40 +57,34 @@ body {
 }
 
 p {
+  font-weight: 400;
   color: var(--font-secondary);
-  font-family: var(--family-sans);
-  font-weight: 500;
-  line-height: 1.5;
 }
 
 a {
-  color: var(--font-primary);
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 400;
+  color: var(--font-primary);
 }
 
 h1 {
-  font-size: clamp(4.8rem, 7vw, 6.8rem);
+  font-size: clamp(4.8rem, 7vw, 6.4rem);
   color: var(--font-primary);
-  font-family: var(--family-sans);
 }
 
 h2 {
-  font-size: 2.4rem;
+  font-size: 3.2rem;
   color: var(--font-primary);
-  font-family: var(--family-sans);
 }
 
 h3 {
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   color: var(--font-primary);
-  font-family: var(--family-sans);
 }
 
 span {
   color: var(--primary);
-  font-family: var(--family-mono);
   font-size: 1.4rem;
   line-height: 1.5;
 }
@@ -96,32 +107,76 @@ button {
 }
 
 .linkBtn {
-  display: inline-block;
-  padding: 0.8rem 3.2rem;
+  display: flex;
+
+  padding: 0.8rem 1.6rem;
   border: 0.2rem solid var(--primary);
-  border-radius: var(--radius);
-  color: var(--primary);
-  font-size: 1.8rem;
-  letter-spacing: 0.2rem;
-  font-family: var(--family-mono);
-  text-transform: uppercase;
-  transition: 0.2s ease-in;
+  border-radius: 0.4rem;
+  transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   outline: none;
+
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--font-primary);
 }
 
 .linkBtn:is(:hover, :focus) {
   background-color: var(--btn-hover);
 }
 
+.section__title h2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding-bottom: 1.6rem;
+}
+.section__title h2::before {
+  content: "";
+  width: min(30rem, 100%);
+  height: 0.1rem;
+  margin-right: 2rem;
+  background-color: var(--extra);
+}
+.section__title h2::after {
+  content: "";
+  width: min(30rem, 100%);
+  height: 0.1rem;
+  margin-left: 2rem;
+  background-color: var(--extra);
+}
+
+.underline {
+  position: relative;
+  padding-block: 0.5rem;
+
+  text-transform: initial;
+  color: var(--primary);
+}
+.underline:after {
+  content: "";
+  position: absolute;
+  bottom: 0.3rem;
+  left: 0;
+  width: 0;
+  display: block;
+
+  height: 0.1rem;
+  background-color: var(--primary);
+}
+
 ::-webkit-scrollbar {
   width: 1.2rem;
 }
 ::-webkit-scrollbar-track {
-  background: var(--quaternary);
+  background: transparent;
+  margin-block: 0.4rem;
 }
 ::-webkit-scrollbar-thumb {
-  background: hsl(0, 0%, 25%);
-  border-radius: var(--radius);
+  background: #1b1f28;
+  border-radius: 1.2rem;
 }
 
 ::selection {
@@ -129,32 +184,27 @@ button {
   color: var(--tertiary);
 }
 
-/* ================================================= */
-/* =================== PRELOADER =================== */
-/* ================================================= */
-
 /* =========================================================================== */
 /* =================================== NAV =================================== */
 /* =========================================================================== */
 
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: fixed;
+  z-index: 2;
+  display: flex;
+
   width: 100%;
   height: 7rem;
-  background-color: var(--quaternary);
-  font-family: var(--family-sans);
+  background-color: var(--tertiary);
   opacity: 0.95;
-  z-index: 2;
-  transition: 0.3s;
+  transition: 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 nav .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   width: min(192rem, 100%);
   padding-inline: 2.4rem;
 }
@@ -165,35 +215,33 @@ nav .container {
 
 .nav__logo a {
   font-size: 3.2rem;
-  letter-spacing: -0.5rem;
-  padding-right: 0.5rem;
 }
-
 .nav__logo a span {
   font-size: 3.2rem;
   color: var(--primary);
 }
 
 #navigation > ul {
-  display: block;
   position: absolute;
+  z-index: 1;
   top: 7rem;
   left: 0;
+  display: block;
+
   width: 100%;
   height: 0;
   text-align: center;
   visibility: hidden;
   overflow-y: hidden;
-  transition: 0.5s;
-  z-index: 1;
+  transition: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 #navigation.active > ul {
   height: auto;
   padding-bottom: 1.6rem;
   visibility: visible;
-  background-color: var(--quaternary);
-  border-bottom: 0.1rem solid var(--extra);
+  background-color: var(--tertiary);
+  border-bottom: 0.1rem solid var(--quaternary);
 }
 
 #navigation ul li {
@@ -201,16 +249,18 @@ nav .container {
   padding: 0.5rem 2rem;
   margin-inline: auto;
 }
-#navigation ul li:nth-of-type(5) {
+#navigation ul li:nth-of-type(6) {
   margin-top: 0.6rem;
 }
 
 #navigation ul li a {
   display: block;
   padding: 0.8rem;
+  transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
   font-size: 1.8rem;
+  font-weight: 400;
   text-transform: initial;
-  transition: 0.2s ease-in;
 }
 #navigation ul li a.active {
   color: var(--primary);
@@ -218,6 +268,7 @@ nav .container {
 
 #navigation button {
   display: flex;
+
   padding: 0.8rem 1.6rem;
   border: none;
   background: none;
@@ -262,7 +313,8 @@ nav .container {
 #dropA svg {
   position: absolute;
   z-index: -1;
-  top: 1.2rem;
+  top: 1.1rem;
+
   margin-left: 0.5rem;
   transform: rotateX(0);
   transition: transform 0.3s;
@@ -297,6 +349,7 @@ nav .container {
   position: relative;
   left: 1rem;
   display: inline-block;
+
   padding: 0.6rem 3.2rem;
   text-transform: uppercase;
 }
@@ -310,69 +363,96 @@ nav .container > .nav__cv {
 /* ============================================================================== */
 
 header {
+  position: relative;
+
   width: 100%;
   height: 65.6rem;
-  position: relative;
 }
 
 #particles-js {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
   width: 100%;
   height: 100%;
   background-color: var(--tertiary);
   opacity: 0.4;
-  position: absolute;
-  inset: 0;
-  z-index: 1;
   pointer-events: none;
 }
 
 .banner {
   position: relative;
-  padding-top: 16rem;
-  text-align: left;
   z-index: 1;
+
+  padding-top: 16rem;
+  text-align: center;
 }
 
-.banner span {
-  position: relative;
-  left: 0.3rem;
-  font-size: 1.8rem;
+.banner .fadeIn {
+  animation: fadeIn 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(1.6rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .banner h1 {
-  user-select: none;
-  line-height: 0.9;
+  margin-bottom: 2.4rem;
+
+  font-weight: 400;
+  line-height: 0.95;
 }
 
-.banner h1:nth-of-type(2) {
-  color: var(--font-secondary);
-  margin-top: 1.2rem;
+.banner p {
+  max-width: 48rem;
+  margin-inline: auto;
+  margin-bottom: 3.2rem;
+
+  font-size: 2.4rem;
 }
 
 .banner a {
-  position: relative;
-  left: 0.3rem;
-  margin-top: 2.4rem;
+  display: inline-block;
+  width: 16.8rem;
+  padding-block: 1.2rem;
+
+  border-radius: 0.4rem;
+  background-color: var(--primary);
+  transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--tertiary);
 }
 
 .banner a:hover {
-  background-color: var(--btn-hover);
+  background-color: #bc8100;
 }
 
 .mouse-animation {
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
+  z-index: 1;
   display: flex;
   justify-content: center;
+
   height: 4rem;
   width: 2rem;
   margin-inline: auto;
   border: 0.2rem solid var(--font-secondary);
   border-radius: 1.5rem;
-  z-index: 1;
   transition: 0.2s;
+  transform: translateX(-50%);
 }
 
 .mouse-animation a {
@@ -417,10 +497,10 @@ header {
 }
 
 .about__img {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
 
 .about__img img {
@@ -437,32 +517,34 @@ header {
 }
 
 .about__img .border__top {
-  display: block;
   position: absolute;
+  z-index: -1;
   top: -0.3rem;
   right: -0.3rem;
+  display: block;
+
   width: 20rem;
   height: 10rem;
   border-top: 0.6rem solid var(--primary);
   border-right: 0.6rem solid var(--primary);
   transition: 0.3s ease-in;
-  z-index: -1;
 }
 .about__img:hover .border__top {
   transform: translate3d(-0.4rem, 0.4rem, 0);
 }
 
 .about__img .border__bottom {
-  display: block;
   position: absolute;
+  z-index: -1;
   bottom: -0.3rem;
   left: -0.3rem;
+  display: block;
+
   width: 20rem;
   height: 10rem;
   border-bottom: 0.6rem solid var(--primary);
   border-left: 0.6rem solid var(--primary);
   transition: 0.3s ease-in;
-  z-index: -1;
 }
 .about__img:hover .border__bottom {
   transform: translate3d(0.4rem, -0.4rem, 0);
@@ -471,38 +553,28 @@ header {
 .about__txt h2 {
   display: flex;
   align-items: center;
+
   white-space: nowrap;
   padding-bottom: 1.6rem;
 }
 
 .about__txt h2::after {
   content: "";
-  width: min(30rem, 100%);
+  width: min(25rem, 100%);
   height: 0.1rem;
   margin-left: 2rem;
   background-color: var(--extra);
 }
 
 .about__txt p {
-  margin-block: 0.8rem;
+  display: inline-block;
+  margin-block: 1rem;
+
+  font-size: 1.8rem;
 }
 
-.about__txt p a {
-  position: relative;
-  color: var(--primary);
+.about__txt .underline {
   text-transform: uppercase;
-  padding-block: 0.5rem;
-}
-
-.about__txt p a::after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 0.3rem;
-  left: 0;
-  width: 0;
-  height: 0.1rem;
-  background-color: var(--primary);
 }
 
 .about__txt p a:hover::after {
@@ -514,119 +586,75 @@ header {
     width: 0;
   }
   100% {
-    width: 2.2rem;
+    width: 2.5rem;
   }
 }
 
-.about__txt__painel {
-  margin-top: 2.4rem;
+.about__txt__skills {
+  margin-top: 4rem;
 }
 
-.painel__display {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+.about__txt__skills h3 {
+  margin-bottom: 2.4rem;
 
-.painel__tittle {
-  margin-top: 1rem;
-}
-
-.painel__btn {
-  width: 15rem;
-  padding: 1.6rem;
-  border: none;
-  border-bottom: 0.1rem solid var(--primary);
-  color: var(--extra);
-  font-family: var(--family-mono);
-  font-size: 1.6rem;
   text-transform: uppercase;
-  transition: 0.2s ease-in;
-  background-color: transparent;
-}
-.painel__btn:is(:hover, :focus) {
-  color: var(--font-primary);
-}
-.painel__btn.active {
   color: var(--primary);
-  background-color: var(--btn-hover);
 }
 
-.painel__content__box {
-  height: 0;
-  visibility: hidden;
-  opacity: 0;
-}
-.painel__content__box.active {
-  height: auto;
-  visibility: visible;
-  opacity: 1;
-  transition: 0.3s ease-in;
+.about__txt__skills ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
 }
 
-.painel__content__box ul {
-  height: 0;
-  visibility: hidden;
-}
-.painel__content__box.active ul {
-  height: auto;
-  padding-top: 2.4rem;
-  visibility: visible;
-}
-
-.painel__content__box ul li {
+.about__txt__skills li {
   display: grid;
   grid-template-columns: 2rem 1fr;
-  margin-block: 0.4rem;
+  gap: 0.4rem;
 }
 
-.painel__content__box p {
-  font-family: var(--family-mono);
-  margin: 0;
-}
-
-.painel__content__box svg {
-  position: relative;
-  top: 0.2rem;
+.about__txt__skills svg {
   color: var(--primary);
 }
 
-#experience p:first-of-type {
-  margin-bottom: 0.8rem;
+.about__txt__skills p {
+  margin-block: initial;
 }
 
-#experience p.highlight {
-  color: var(--extra);
+/* =================================================================================== */
+/* =================================== EXPERIENCES =================================== */
+/* =================================================================================== */
+
+.experiences__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 3.2rem;
+
+  padding-block: 10rem;
 }
 
-#experience p.highlight a {
-  position: relative;
-  color: var(--primary);
-  text-transform: initial;
-  padding-block: 0.5rem;
+.experiences__box p {
+  font-size: 1.8rem;
+  line-height: 1.2;
 }
 
-#experience p.highlight a::after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 0.3rem;
-  left: 0;
-  width: 0;
-  height: 0.1rem;
-  background-color: var(--primary);
+.experiences__box img {
+  width: min(40rem, 100%);
 }
 
-#experience p.highlight a:hover::after {
+.experiences__box p a:hover::after {
   animation: lineTwo 0.3s linear forwards;
 }
 
 @keyframes lineTwo {
-  from {
+  0% {
     width: 0;
   }
-  to {
-    width: 7.1rem;
+  100% {
+    width: 9.7rem;
   }
 }
 
@@ -634,34 +662,33 @@ header {
 /* =================================== PROJECTS =================================== */
 /* ================================================================================ */
 
-.project__tittle h2 {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
-  padding-bottom: 1.6rem;
+#projects p {
+  margin-block: 4rem;
+  text-align: center;
+  font-size: 1.8rem;
 }
 
-.project__tittle h2::before {
-  content: "";
-  width: min(30rem, 100%);
-  height: 0.1rem;
-  margin-right: 2rem;
-  background-color: var(--extra);
+#projects p a:hover::after {
+  animation: lineThree 0.3s linear forwards;
 }
 
-.project__tittle h2::after {
-  content: "";
-  width: min(30rem, 100%);
-  height: 0.1rem;
-  margin-left: 2rem;
-  background-color: var(--extra);
+@keyframes lineThree {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 6.1rem;
+  }
+}
+
+.project__filter {
+  display: none;
 }
 
 .project__box {
   display: flex;
   gap: 2.4rem;
+
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   padding-block: 4rem;
@@ -689,14 +716,10 @@ header {
   transition: 0.3s ease-in;
 }
 
-.project__single:last-of-type {
-  display: none;
-}
-
 .project__image {
   overflow: hidden;
   margin-bottom: 1.6rem;
-  border-radius: var(--radius);
+  border-radius: 0.4rem;
 }
 
 .project__image img {
@@ -711,6 +734,13 @@ header {
   gap: 0.5rem;
 }
 
+.project__header h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  font-family: "Roboto Mono", monospace;
+  color: var(--primary);
+}
+
 .project__header a {
   padding: 0.6rem;
 }
@@ -718,82 +748,32 @@ header {
   color: var(--primary);
 }
 
+.project__header div:nth-of-type(2) {
+  display: flex;
+  justify-content: center;
+}
+
 .project__description {
-  margin-top: 1.6rem;
+  margin-top: 0.8rem;
 }
 
 .project__description span {
+  font-size: 1.6rem;
   color: var(--font-secondary);
-  word-spacing: -0.4rem;
-}
-
-#projects p {
-  text-align: center;
-}
-
-#projects p a {
-  position: relative;
-  color: var(--primary);
-  text-transform: initial;
-  padding-block: 0.5rem;
-}
-
-#projects p a::after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 0.3rem;
-  left: 0;
-  width: 0;
-  height: 0.1rem;
-  background-color: var(--primary);
-}
-
-#projects p a:hover::after {
-  animation: lineThree 0.3s linear forwards;
-}
-
-@keyframes lineThree {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 5.4rem;
-  }
 }
 
 /* =============================================================================== */
 /* =================================== CONTACT =================================== */
 /* =============================================================================== */
 
-.contact__tittle h2 {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
-  padding-bottom: 1.6rem;
-  text-align: center;
-}
-
-.contact__tittle h2::before {
-  content: "";
-  width: min(30rem, 100%);
-  height: 0.1rem;
-  margin-right: 2rem;
-  background-color: var(--extra);
-}
-.contact__tittle h2::after {
-  content: "";
-  width: min(30rem, 100%);
-  height: 0.1rem;
-  margin-left: 2rem;
-  background-color: var(--extra);
-}
-
 .contact__box {
   margin-block: 9rem 3rem;
   text-align: center;
+}
+
+.contact__box h3 {
+  font-weight: 400;
+  color: var(--font-secondary);
 }
 
 .contact__box span {
@@ -803,10 +783,29 @@ header {
 
 .contact__links {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 1.6rem;
-  margin-top: 3.2rem;
+
+  margin-top: 4rem;
+}
+
+.contact__links a {
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  width: 16.4rem;
+  padding: 1.2rem 2rem;
+
+  font-size: 1.8rem;
+  text-transform: initial;
+}
+
+.contact__links a:first-of-type svg {
+  position: relative;
+  top: -0.2rem;
 }
 
 /* ============================================================================== */
@@ -819,7 +818,7 @@ footer .container {
 }
 
 footer p {
-  font-weight: 500;
+  font-weight: 400;
 }
 
 footer span {
@@ -846,6 +845,36 @@ footer span {
 
 @media (min-width: 520px) {
   /* ========== PROJECT ========== */
+
+  .project__filter {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .project__trigger {
+    display: inline-block;
+    width: 16.8rem;
+    padding-block: 1.2rem;
+
+    border: none;
+    border-radius: 0.4rem;
+    background-color: transparent;
+    transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--font-secondary);
+  }
+  .project__trigger.active {
+    background-color: var(--primary);
+    color: var(--tertiary) !important;
+  }
+  .project__trigger:hover {
+    color: var(--primary);
+  }
+
   .project__box {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -856,10 +885,10 @@ footer span {
   .project__single {
     margin-top: 1.6rem;
     scroll-snap-align: initial;
+    transition: all 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   }
-
-  .project__single:last-of-type {
-    display: block;
+  .project__single.hide {
+    display: none;
   }
 }
 
@@ -881,10 +910,11 @@ footer span {
     visibility: initial;
     overflow-y: initial;
   }
-
   nav {
-    height: 8rem;
-    background-color: var(--tertiary);
+    height: 7rem;
+    background-color: rgba(9, 10, 16, 0.75);
+    backdrop-filter: saturate(180%) blur(15px);
+    backface-visibility: hidden;
   }
 
   #navigation {
@@ -897,9 +927,9 @@ footer span {
   }
 
   #navigation ul {
+    position: initial;
     display: flex;
     align-items: center;
-    position: initial;
     height: initial;
   }
 
@@ -908,8 +938,8 @@ footer span {
     border-bottom: none;
   }
 
-  #navigation ul li:nth-of-type(4),
-  #navigation ul li:nth-of-type(5) {
+  #navigation ul li:nth-of-type(5),
+  #navigation ul li:nth-of-type(6) {
     display: none;
   }
   #navigation ul li a:hover {
@@ -923,6 +953,7 @@ footer span {
   nav .container > .nav__cv .linkBtn {
     display: flex;
     justify-content: center;
+
     width: 7.2rem;
     padding: 0.6rem 2rem;
   }
@@ -989,7 +1020,6 @@ footer span {
 
   .language a {
     font-size: 1.8rem;
-    font-family: var(--family-mono);
     text-transform: lowercase;
     transition: 0.2s ease-in;
   }
