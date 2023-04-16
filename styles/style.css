@@ -389,26 +389,13 @@ header {
   text-align: center;
 }
 
-.banner .fadeIn {
-  animation: fadeIn 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    transform: translateY(1.6rem);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 .banner h1 {
   margin-bottom: 2.4rem;
 
   font-weight: 400;
   line-height: 0.95;
+
+  animation: fadeIn 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
 }
 
 .banner p {
@@ -417,6 +404,8 @@ header {
   margin-bottom: 3.2rem;
 
   font-size: 2.4rem;
+
+  animation: fadeIn 1.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
 }
 
 .banner a {
@@ -432,10 +421,23 @@ header {
   font-weight: 500;
   text-transform: uppercase;
   color: var(--tertiary);
+
+  animation: fadeIn 1.4s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
 }
 
 .banner a:hover {
   background-color: #bc8100;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(1.6rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .mouse-animation {
