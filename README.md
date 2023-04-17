@@ -5,7 +5,7 @@
 <br/>
 
 <h3 align="center">
-  <img src="./.github/readme-gif.gif" alt="project gif" />
+  <img src="./.github/readme.gif" alt="project gif" />
   <br />
   <a href="https://erick-kuwahara.vercel.app">live demo</a>
 </h3>
