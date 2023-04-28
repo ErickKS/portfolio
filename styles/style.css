@@ -62,6 +62,7 @@ h1 {
 h2 {
   font-size: 3.2rem;
   color: var(--font-primary);
+  line-height: 120%;
 }
 
 h3 {
