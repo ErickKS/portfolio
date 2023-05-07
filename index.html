@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Orbitron:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- MAIN -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,32 +17,10 @@
     <meta name="description" content="My personal portfolio" />
     <title>Portfolio | Erick Kuwahara</title>
 
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600&family=Roboto+Mono:wght@500&display=swap"
-      rel="stylesheet"
-    />
-
     <!-- FAVICON -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./images/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./images/favicon/favicon-16x16.png"
-    />
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png" />
     <link rel="manifest" href="./images/favicon/site.webmanifest" />
 
     <!-- CSS -->
@@ -109,13 +96,75 @@
       </nav>
 
       <div class="banner">
-        <div class="container">
-          <h1>Welcome to my <br />portfolio</h1>
-          <p>
-            If you are looking for a front-end developer, you have come to the
-            right place.
-          </p>
+        <main class="container">
+          <h1>Welcome to my portfolio</h1>
+          <p>If you are looking for a front-end developer, you have come to the right place.</p>
+
+          <!-- DOTS -->
+          <img src="./images/dots.svg" />
+          <img src="./images/dots.svg" />
+        </main>
+
+        <div>
+          <!-- LINES LEFT -->
+          <svg width="603" height="273" viewBox="0 0 603 273" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 1H42.5L132.5 91H265.5L336.5 162H597" stroke="url(#paint0_linear_5_50)" stroke-width="2" />
+            <path
+              d="M6 272H184.149L247.702 219H438.362L483.9 174H603"
+              stroke="url(#paint1_linear_5_50)"
+              stroke-width="2"
+            />
+            <defs>
+              <linearGradient
+                id="paint0_linear_5_50"
+                x1="597"
+                y1="162"
+                x2="-2.70217e-05"
+                y2="162"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#F0A400" />
+                <stop offset="1" stop-color="#F0A400" stop-opacity="0" />
+              </linearGradient>
+              <linearGradient id="paint1_linear_5_50" x1="6" y1="174" x2="603" y2="174" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#F0A400" stop-opacity="0" />
+                <stop offset="1" stop-color="#F0A400" />
+              </linearGradient>
+            </defs>
+          </svg>
+
           <a href="#about" class="mainBtn">About me</a>
+
+          <!-- LINES RIGHT -->
+          <svg width="604" height="273" viewBox="0 0 604 273" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M597 272H418.851L355.298 219L164.638 219L119.1 174L-3.38554e-05 174"
+              stroke="url(#paint0_linear_5_194)"
+              stroke-width="2"
+            />
+            <path
+              d="M604 1L560.5 1L470.5 91L337.5 91L266.5 162L6.00037 162"
+              stroke="url(#paint1_linear_5_194)"
+              stroke-width="2"
+            />
+            <defs>
+              <linearGradient id="paint0_linear_5_194" x1="597" y1="174" x2="0" y2="174" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#F0A400" stop-opacity="0" />
+                <stop offset="1" stop-color="#F0A400" />
+              </linearGradient>
+              <linearGradient
+                id="paint1_linear_5_194"
+                x1="604"
+                y1="162"
+                x2="6.00001"
+                y2="162"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#F0A400" stop-opacity="0" />
+                <stop offset="1" stop-color="#F0A400" />
+              </linearGradient>
+            </defs>
+          </svg>
         </div>
       </div>
 
@@ -149,10 +198,7 @@
             </a>
           </li>
           <li>
-            <a
-              href="https://www.linkedin.com/in/erick-kuwahara/"
-              target="_blank"
-            >
+            <a href="https://www.linkedin.com/in/erick-kuwahara/" target="_blank">
               <svg
                 width="20"
                 height="20"
@@ -164,9 +210,7 @@
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path
-                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-                ></path>
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                 <path d="M2 9h4v12H2z"></path>
                 <path d="M4 2a2 2 0 1 0 0 4 2 2 0 1 0 0-4z"></path>
               </svg>
@@ -185,9 +229,7 @@
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path
-                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-                ></path>
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                 <path d="m22 6-10 7L2 6"></path>
               </svg>
             </a>
@@ -222,13 +264,11 @@
           <div class="about__txt">
             <h2>About Me</h2>
             <p>
-              My name's Erick Kuwahara da Silva, I'm 18 and I'm from São Paulo -
-              Brazil. I got to know the programming area during the COVID-19
-              pandemic, and every day I'm more admired by this "world".
+              My name's Erick Kuwahara da Silva, I'm 18 and I'm from São Paulo - Brazil. I got to know the programming
+              area during the COVID-19 pandemic, and every day I'm more admired by this "world".
             </p>
             <p>
-              I've constantly been studying and deepening Front End
-              technologies, seeking excellence in user experience.
+              I've constantly been studying and deepening Front End technologies, seeking excellence in user experience.
             </p>
             <p>
               You can find out more about me by simply checking out my
@@ -417,20 +457,13 @@
         <p>
           See some of my projects below <br />
           or access my
-          <a
-            href="https://github.com/ErickKS?tab=repositories"
-            target="_blank"
-            class="underline"
-            >GitHub</a
-          >.
+          <a href="https://github.com/ErickKS?tab=repositories" target="_blank" class="underline">GitHub</a>.
         </p>
 
         <div class="project__filter">
           <button class="project__trigger active" data-filter="all">All</button>
           <button class="project__trigger" data-filter="clone">Clone</button>
-          <button class="project__trigger" data-filter="logical">
-            Logical
-          </button>
+          <button class="project__trigger" data-filter="logical">Logical</button>
         </div>
 
         <div class="project__box">
@@ -443,11 +476,7 @@
                 <h3>Parcel</h3>
               </div>
               <div>
-                <a
-                  href="https://github.com/ErickKS/parcel"
-                  target="_blank"
-                  title="Repository"
-                >
+                <a href="https://github.com/ErickKS/parcel" target="_blank" title="Repository">
                   <svg
                     width="22"
                     height="22"
@@ -465,11 +494,7 @@
                     <path d="M9.25 19.503c-5 1.498-5-2.496-7-2.996"></path>
                   </svg>
                 </a>
-                <a
-                  href="https://erickks.github.io/parcel/"
-                  target="_blank"
-                  title="Live demo"
-                >
+                <a href="https://erickks.github.io/parcel/" target="_blank" title="Live demo">
                   <svg
                     width="22"
                     height="22"
@@ -481,9 +506,7 @@
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path
-                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
-                    ></path>
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                     <path d="M12 9a3 3 0 1 0 0 6 3 3 0 1 0 0-6z"></path>
                   </svg>
                 </a>
@@ -506,11 +529,7 @@
                 <h3>Aria Business</h3>
               </div>
               <div>
-                <a
-                  href="https://github.com/ErickKS/aria-business"
-                  target="_blank"
-                  title="Repository"
-                >
+                <a href="https://github.com/ErickKS/aria-business" target="_blank" title="Repository">
                   <svg
                     width="22"
                     height="22"
@@ -528,11 +547,7 @@
                     <path d="M9.25 19.503c-5 1.498-5-2.496-7-2.996"></path>
                   </svg>
                 </a>
-                <a
-                  href="https://erickks.github.io/aria-business/"
-                  target="_blank"
-                  title="Live demo"
-                >
+                <a href="https://erickks.github.io/aria-business/" target="_blank" title="Live demo">
                   <svg
                     width="22"
                     height="22"
@@ -544,9 +559,7 @@
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path
-                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
-                    ></path>
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                     <path d="M12 9a3 3 0 1 0 0 6 3 3 0 1 0 0-6z"></path>
                   </svg>
                 </a>
@@ -569,11 +582,7 @@
                 <h3>Weather App</h3>
               </div>
               <div>
-                <a
-                  href="https://github.com/ErickKS/weather-app"
-                  target="_blank"
-                  title="Repository"
-                >
+                <a href="https://github.com/ErickKS/weather-app" target="_blank" title="Repository">
                   <svg
                     width="22"
                     height="22"
@@ -591,11 +600,7 @@
                     <path d="M9.25 19.503c-5 1.498-5-2.496-7-2.996"></path>
                   </svg>
                 </a>
-                <a
-                  href="https://erickks.github.io/weather-app/"
-                  target="_blank"
-                  title="Live demo"
-                >
+                <a href="https://erickks.github.io/weather-app/" target="_blank" title="Live demo">
                   <svg
                     width="22"
                     height="22"
@@ -607,9 +612,7 @@
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path
-                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
-                    ></path>
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                     <path d="M12 9a3 3 0 1 0 0 6 3 3 0 1 0 0-6z"></path>
                   </svg>
                 </a>
@@ -632,11 +635,7 @@
                 <h3>Quiz</h3>
               </div>
               <div>
-                <a
-                  href="https://github.com/ErickKS/quiz"
-                  target="_blank"
-                  title="Repository"
-                >
+                <a href="https://github.com/ErickKS/quiz" target="_blank" title="Repository">
                   <svg
                     width="22"
                     height="22"
@@ -654,11 +653,7 @@
                     <path d="M9.25 19.503c-5 1.498-5-2.496-7-2.996"></path>
                   </svg>
                 </a>
-                <a
-                  href="https://erickks.github.io/quiz/"
-                  target="_blank"
-                  title="Live demo"
-                >
+                <a href="https://erickks.github.io/quiz/" target="_blank" title="Live demo">
                   <svg
                     width="22"
                     height="22"
@@ -670,9 +665,7 @@
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path
-                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
-                    ></path>
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                     <path d="M12 9a3 3 0 1 0 0 6 3 3 0 1 0 0-6z"></path>
                   </svg>
                 </a>
@@ -695,11 +688,7 @@
                 <h3>Calculator</h3>
               </div>
               <div>
-                <a
-                  href="https://github.com/ErickKS/calculator"
-                  target="_blank"
-                  title="Repository"
-                >
+                <a href="https://github.com/ErickKS/calculator" target="_blank" title="Repository">
                   <svg
                     width="22"
                     height="22"
@@ -717,11 +706,7 @@
                     <path d="M9.25 19.503c-5 1.498-5-2.496-7-2.996"></path>
                   </svg>
                 </a>
-                <a
-                  href="https://erickks.github.io/calculator/"
-                  target="_blank"
-                  title="Live demo"
-                >
+                <a href="https://erickks.github.io/calculator/" target="_blank" title="Live demo">
                   <svg
                     width="22"
                     height="22"
@@ -733,9 +718,7 @@
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path
-                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
-                    ></path>
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                     <path d="M12 9a3 3 0 1 0 0 6 3 3 0 1 0 0-6z"></path>
                   </svg>
                 </a>
@@ -758,11 +741,7 @@
                 <h3>Pomodoro</h3>
               </div>
               <div>
-                <a
-                  href="https://github.com/ErickKS/pomodoro-timer"
-                  target="_blank"
-                  title="Repository"
-                >
+                <a href="https://github.com/ErickKS/pomodoro-timer" target="_blank" title="Repository">
                   <svg
                     width="22"
                     height="22"
@@ -780,11 +759,7 @@
                     <path d="M9.25 19.503c-5 1.498-5-2.496-7-2.996"></path>
                   </svg>
                 </a>
-                <a
-                  href="https://erickks.github.io/pomodoro-timer/"
-                  target="_blank"
-                  title="Live demo"
-                >
+                <a href="https://erickks.github.io/pomodoro-timer/" target="_blank" title="Live demo">
                   <svg
                     width="22"
                     height="22"
@@ -796,9 +771,7 @@
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path
-                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
-                    ></path>
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                     <path d="M12 9a3 3 0 1 0 0 6 3 3 0 1 0 0-6z"></path>
                   </svg>
                 </a>
@@ -821,11 +794,7 @@
                 <h3>To-Do List</h3>
               </div>
               <div>
-                <a
-                  href="https://github.com/ErickKS/to-do-list-react"
-                  target="_blank"
-                  title="Repository"
-                >
+                <a href="https://github.com/ErickKS/to-do-list-react" target="_blank" title="Repository">
                   <svg
                     width="22"
                     height="22"
@@ -843,11 +812,7 @@
                     <path d="M9.25 19.503c-5 1.498-5-2.496-7-2.996"></path>
                   </svg>
                 </a>
-                <a
-                  href="https://erickks.github.io/to-do-list-react/"
-                  target="_blank"
-                  title="Live demo"
-                >
+                <a href="https://erickks.github.io/to-do-list-react/" target="_blank" title="Live demo">
                   <svg
                     width="22"
                     height="22"
@@ -859,9 +824,7 @@
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path
-                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
-                    ></path>
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                     <path d="M12 9a3 3 0 1 0 0 6 3 3 0 1 0 0-6z"></path>
                   </svg>
                 </a>
@@ -884,11 +847,7 @@
                 <h3>Multi-step Form</h3>
               </div>
               <div>
-                <a
-                  href="https://github.com/ErickKS/react-multi-step-form"
-                  target="_blank"
-                  title="Repository"
-                >
+                <a href="https://github.com/ErickKS/react-multi-step-form" target="_blank" title="Repository">
                   <svg
                     width="22"
                     height="22"
@@ -906,11 +865,7 @@
                     <path d="M9.25 19.503c-5 1.498-5-2.496-7-2.996"></path>
                   </svg>
                 </a>
-                <a
-                  href="https://erickks.github.io/react-multi-step-form/"
-                  target="_blank"
-                  title="Live demo"
-                >
+                <a href="https://erickks.github.io/react-multi-step-form/" target="_blank" title="Live demo">
                   <svg
                     width="22"
                     height="22"
@@ -922,9 +877,7 @@
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path
-                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
-                    ></path>
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                     <path d="M12 9a3 3 0 1 0 0 6 3 3 0 1 0 0-6z"></path>
                   </svg>
                 </a>
@@ -947,11 +900,7 @@
                 <h3>Quotes</h3>
               </div>
               <div>
-                <a
-                  href="https://github.com/ErickKS/quotes-generator"
-                  target="_blank"
-                  title="Repository"
-                >
+                <a href="https://github.com/ErickKS/quotes-generator" target="_blank" title="Repository">
                   <svg
                     width="22"
                     height="22"
@@ -969,11 +918,7 @@
                     <path d="M9.25 19.503c-5 1.498-5-2.496-7-2.996"></path>
                   </svg>
                 </a>
-                <a
-                  href="https://erickks.github.io/quotes-generator/"
-                  target="_blank"
-                  title="Live demo"
-                >
+                <a href="https://erickks.github.io/quotes-generator/" target="_blank" title="Live demo">
                   <svg
                     width="22"
                     height="22"
@@ -985,9 +930,7 @@
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path
-                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
-                    ></path>
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                     <path d="M12 9a3 3 0 1 0 0 6 3 3 0 1 0 0-6z"></path>
                   </svg>
                 </a>
@@ -1010,11 +953,7 @@
                 <h3>Dashboard</h3>
               </div>
               <div>
-                <a
-                  href="https://github.com/ErickKS/react-dashboard"
-                  target="_blank"
-                  title="Repository"
-                >
+                <a href="https://github.com/ErickKS/react-dashboard" target="_blank" title="Repository">
                   <svg
                     width="22"
                     height="22"
@@ -1032,11 +971,7 @@
                     <path d="M9.25 19.503c-5 1.498-5-2.496-7-2.996"></path>
                   </svg>
                 </a>
-                <a
-                  href="https://erickks.github.io/react-dashboard/"
-                  target="_blank"
-                  title="Live demo"
-                >
+                <a href="https://erickks.github.io/react-dashboard/" target="_blank" title="Live demo">
                   <svg
                     width="22"
                     height="22"
@@ -1048,9 +983,7 @@
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path
-                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
-                    ></path>
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                     <path d="M12 9a3 3 0 1 0 0 6 3 3 0 1 0 0-6z"></path>
                   </svg>
                 </a>
@@ -1078,11 +1011,7 @@
         </div>
 
         <div class="contact__box">
-          <a
-            href="https://www.linkedin.com/in/erick-kuwahara/"
-            target="_blank"
-            class="mainBtn"
-          >
+          <a href="https://www.linkedin.com/in/erick-kuwahara/" target="_blank" class="mainBtn">
             <svg
               width="20"
               height="20"
@@ -1094,9 +1023,7 @@
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-              ></path>
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
               <path d="M2 9h4v12H2z"></path>
               <path d="M4 2a2 2 0 1 0 0 4 2 2 0 1 0 0-4z"></path>
             </svg>
@@ -1114,9 +1041,7 @@
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-              ></path>
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
               <path d="m22 6-10 7L2 6"></path>
             </svg>
             Email
