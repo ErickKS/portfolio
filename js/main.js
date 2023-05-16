@@ -47,7 +47,14 @@ for (const navLink of document.querySelectorAll(".navLink")) {
   });
 }
 
-// NAV ANIMATION && MOUSE SCROLL ANIMATION (banner)
+// NAV ANIMATION && MOUSE SCROLL ANIMATION (banner) && SECTION ANIMATION
+
+window.onload = () => {
+  Boolean(window.localStorage.getItem("about")) && activateCurrentSection(about, true);
+  Boolean(window.localStorage.getItem("experiences")) && activateCurrentSection(experiences, true);
+  Boolean(window.localStorage.getItem("projects")) && activateCurrentSection(projects, true);
+  Boolean(window.localStorage.getItem("contact")) && activateCurrentSection(contact, true);
+};
 
 window.onscroll = () => {
   onScrollNavAnimation();
@@ -55,31 +62,48 @@ window.onscroll = () => {
 };
 
 function onScrollNavAnimation() {
-  activateMenuCurrentSection(about);
-  activateMenuCurrentSection(experiences);
-  activateMenuCurrentSection(projects);
-  activateMenuCurrentSection(contact);
+  activateCurrentSection(about, false);
+  activateCurrentSection(experiences, false);
+  activateCurrentSection(projects, false);
+  activateCurrentSection(contact, false);
 }
 
-function activateMenuCurrentSection(section) {
+function activateCurrentSection(section, isInLocalStorage) {
+  const sectionId = section.getAttribute("id");
+
   const targetLine = scrollY + innerHeight / 2;
+  const targetLine2 = scrollY + innerHeight / 2 + 250;
 
   const sectionTop = section.offsetTop;
   const sectionHeight = section.offsetHeight;
   const sectionTopReachOrPassedTargetLine = targetLine >= sectionTop;
+  const sectionTopReachOrPassedTargetLine2 = targetLine2 >= sectionTop;
 
   const sectionEndsAt = sectionTop + sectionHeight;
   const sectionEndPassedTargetLine = sectionEndsAt <= targetLine;
+  const sectionEndPassedTargetLine2 = sectionEndsAt <= targetLine2;
 
-  const sectionBoundaries =
-    sectionTopReachOrPassedTargetLine && !sectionEndPassedTargetLine;
+  const sectionBoundaries = sectionTopReachOrPassedTargetLine && !sectionEndPassedTargetLine;
+  const sectionBoundaries2 = sectionTopReachOrPassedTargetLine2 && !sectionEndPassedTargetLine2;
 
-  const sectionId = section.getAttribute("id");
+  // NAV ANIMATION
   const menuElement = document.querySelector(`.menu li a[href*=${sectionId}]`);
 
   menuElement.classList.remove("active");
   if (sectionBoundaries) {
     menuElement.classList.add("active");
+  }
+
+  // SECTION ANIMATION
+  const heroSection = document.querySelector(`#${sectionId}`);
+
+  if (sectionBoundaries) {
+    heroSection.classList.add("active");
+    window.localStorage.setItem(`${sectionId}`, true);
+  }
+
+  if (isInLocalStorage) {
+    heroSection.classList.add("active");
   }
 }
 
@@ -93,7 +117,7 @@ function toggleMouseStyle() {
   }
 }
 
-// PROJECTS ANIMATION
+// PROJECTS FILTER
 
 const projectTrigger = document.querySelectorAll(".project__trigger");
 const project = document.querySelectorAll(".project__single");
@@ -119,7 +143,6 @@ projectTrigger.forEach((button) => {
     button.classList.add("active");
 
     const currentCategory = button.dataset.filter;
-    console.log(currentCategory);
     filter(currentCategory, project);
   });
 });
