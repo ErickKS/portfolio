@@ -72,7 +72,7 @@ function activateCurrentSection(section, isInLocalStorage) {
   const sectionId = section.getAttribute("id");
 
   const targetLine = scrollY + innerHeight / 2;
-  const targetLine2 = scrollY + innerHeight / 2 + 250;
+  const targetLine2 = scrollY + innerHeight / 1.2;
 
   const sectionTop = section.offsetTop;
   const sectionHeight = section.offsetHeight;
@@ -81,10 +81,9 @@ function activateCurrentSection(section, isInLocalStorage) {
 
   const sectionEndsAt = sectionTop + sectionHeight;
   const sectionEndPassedTargetLine = sectionEndsAt <= targetLine;
-  const sectionEndPassedTargetLine2 = sectionEndsAt <= targetLine2;
 
   const sectionBoundaries = sectionTopReachOrPassedTargetLine && !sectionEndPassedTargetLine;
-  const sectionBoundaries2 = sectionTopReachOrPassedTargetLine2 && !sectionEndPassedTargetLine2;
+  const sectionBoundaries2 = sectionTopReachOrPassedTargetLine2;
 
   // NAV ANIMATION
   const menuElement = document.querySelector(`.menu li a[href*=${sectionId}]`);
@@ -97,7 +96,7 @@ function activateCurrentSection(section, isInLocalStorage) {
   // SECTION ANIMATION
   const heroSection = document.querySelector(`#${sectionId}`);
 
-  if (sectionBoundaries) {
+  if (sectionBoundaries2) {
     heroSection.classList.add("active");
     sessionStorage.setItem(`${sectionId}`, true);
   }
