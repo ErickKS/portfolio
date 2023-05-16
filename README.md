@@ -4,8 +4,14 @@
 
 <br/>
 
-<h3 align="center">
+<div align="center">
   <img src="./.github/readme-img.png" alt="project image" />
+  
   <br />
-  <a href="https://erick-kuwahara.vercel.app">live demo</a>
-</h3>
+  
+  <h3 align="center">
+    <strong>
+      <code>&nbsp;<a href="https://erick-kuwahara.vercel.app">live demo</a>&nbsp;</code>
+    </strong>
+  </h3>
+</div>
