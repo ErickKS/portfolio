@@ -50,10 +50,10 @@ for (const navLink of document.querySelectorAll(".navLink")) {
 // NAV ANIMATION && MOUSE SCROLL ANIMATION (banner) && SECTION ANIMATION
 
 window.onload = () => {
-  Boolean(window.localStorage.getItem("about")) && activateCurrentSection(about, true);
-  Boolean(window.localStorage.getItem("experiences")) && activateCurrentSection(experiences, true);
-  Boolean(window.localStorage.getItem("projects")) && activateCurrentSection(projects, true);
-  Boolean(window.localStorage.getItem("contact")) && activateCurrentSection(contact, true);
+  Boolean(sessionStorage.getItem("about")) && activateCurrentSection(about, true);
+  Boolean(sessionStorage.getItem("experiences")) && activateCurrentSection(experiences, true);
+  Boolean(sessionStorage.getItem("projects")) && activateCurrentSection(projects, true);
+  Boolean(sessionStorage.getItem("contact")) && activateCurrentSection(contact, true);
 };
 
 window.onscroll = () => {
@@ -99,7 +99,7 @@ function activateCurrentSection(section, isInLocalStorage) {
 
   if (sectionBoundaries) {
     heroSection.classList.add("active");
-    window.localStorage.setItem(`${sectionId}`, true);
+    sessionStorage.setItem(`${sectionId}`, true);
   }
 
   if (isInLocalStorage) {
