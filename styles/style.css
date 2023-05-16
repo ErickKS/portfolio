@@ -1098,6 +1098,7 @@ header {
 
 #contact {
   padding-top: 8rem;
+  overflow: hidden;
 }
 
 #contact h2 {
@@ -1119,12 +1120,46 @@ header {
   justify-content: center;
   gap: 1.6rem;
 
-  margin-top: 4rem;
+  margin-top: 12rem;
   opacity: 0;
 }
 #contact.active .contact__box {
   animation: fadeIn 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
   animation-delay: 0.4s;
+}
+
+.contact__box > div {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5.2rem;
+}
+
+.contact__box div div {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.contact__box svg {
+  position: relative;
+  top: -3.1rem;
+}
+.contact__box svg path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+#contact.active .contact__box svg:nth-of-type(1) path {
+  animation: dashLines 3s cubic-bezier(0.4, 0, 0.7, 1) forwards;
+  animation-delay: 0.5s;
+}
+#contact.active .contact__box svg:nth-of-type(2) path {
+  animation: dashLines 3s cubic-bezier(0.4, 0, 0.7, 1) forwards;
+  animation-delay: 0.5s;
 }
 
 /* ============================================================================== */
