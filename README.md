@@ -5,13 +5,13 @@
 <br/>
 
 <div align="center">
-  <img src="./.github/readme-img.png" alt="project image" />
-  
+  <img src="./.github/print.png" alt="project image" />
+
   <br />
-  
+
   <h3 align="center">
     <strong>
-      <code>&nbsp;<a href="https://erick-kuwahara.vercel.app">live demo</a>&nbsp;</code>
+      <code>&nbsp;<a href="https://erick-kuwahara.vercel.app">access here</a>&nbsp;</code>
     </strong>
   </h3>
 </div>
