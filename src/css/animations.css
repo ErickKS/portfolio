@@ -1,0 +1,148 @@
+/* ===============  SLIDE  =============== */
+.slide-from-top {
+  animation: slide-from-top 1.6s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards 2.2s;
+}
+@keyframes slide-from-top {
+  from {
+    transform: translateY(-7rem);
+  }
+  to {
+    transform: translateY(0) scale3d(1, 1, 1);
+    opacity: 1;
+  }
+}
+
+.slide-from-left {
+  animation: slide-from-left 1.6s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards 2.2s;
+}
+@keyframes slide-from-left {
+  from {
+    transform: translateX(-8.4rem);
+  }
+  to {
+    transform: translateX(0rem);
+    opacity: 1;
+  }
+}
+
+.slide-from-right {
+  animation: slide-from-right 1.6s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards 2.2s;
+}
+@keyframes slide-from-right {
+  from {
+    transform: translateX(8.4rem);
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-from-right-ex {
+  animation: slide-from-right-ex 1.6s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards 2.2s;
+}
+@keyframes slide-from-right-ex {
+  from {
+    transform: translateX(2.4rem);
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* ===============  FADE  =============== */
+
+.fade-in {
+  animation: fade-in 1.6s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+}
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-up {
+  animation: fade-up 1.6s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+}
+@keyframes fade-up {
+  from {
+    transform: translateY(1.6rem);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ===============  SCALE  =============== */
+
+.scale-in {
+  animation: scale-in 0.8s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+}
+@keyframes scale-in {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ===============  MOUSE  =============== */
+
+.mouse-scroll {
+  animation: mouse-scroll 1.5s infinite;
+}
+@keyframes mouse-scroll {
+  from {
+    transform: translate3d(0, -1rem, 0);
+  }
+  to {
+    transform: translate3d(0, 0.7rem, 0);
+    opacity: 0;
+  }
+}
+
+/* ===============  TRANSLATE  =============== */
+
+.translate-top-right {
+  animation: translate-top-right 1.2s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+@keyframes translate-top-right {
+  from {
+    transform: translate3d(-3rem, 3rem, 0);
+  }
+}
+
+.translate-bottom-left {
+  animation: translate-bottom-left 1.2s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+@keyframes translate-bottom-left {
+  from {
+    transform: translate3d(3rem, -3rem, 0);
+  }
+}
+
+/* ===============  DASHLINES  =============== */
+.dash-lines {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+@keyframes dash-lines {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes circle-opacity {
+  from {
+    transform: scale(0.1, 0.1, 0.1);
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

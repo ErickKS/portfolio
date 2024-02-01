@@ -15,36 +15,38 @@
     <title>Portfolio | Erick Kuwahara</title>
 
     <!-- FAVICON -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png" />
-    <link rel="manifest" href="./images/favicon/site.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./src/assets/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="./src/assets/favicon/site.webmanifest" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./src/css/animations.css" />
+    <link rel="stylesheet" href="./src/css/main.css" />
   </head>
+
   <body>
     <!-- HEADER -->
     <header>
-      <nav>
+      <nav class="slide-from-top">
         <div class="container">
           <div class="nav__logo">
-            <a href="./" translate="no">E<span>.K</span></a>
+            <a href="./" translate="no">E.K</a>
           </div>
 
-          <div id="navigation">
-            <button id="btnMobile">
-              <span id="hamburger"></span>
+          <div id="navigation" class="nav__links">
+            <button id="btn-mobile">
+              <div id="hamburger"></div>
             </button>
 
-            <ul class="menu">
+            <ul>
               <li><a href="#about">About</a></li>
               <li><a href="#experiences">Experiences</a></li>
               <li><a href="#projects">Projects</a></li>
               <li><a href="#contact">Contact</a></li>
 
               <li>
-                <a id="dropA">
+                <a id="dropdown-trigger">
                   Languages
                   <svg
                     width="20"
@@ -60,7 +62,8 @@
                     <path d="m6 9 6 6 6-6"></path>
                   </svg>
                 </a>
-                <ul id="dropUl">
+
+                <ul id="dropdown-content">
                   <li><a href="./" class="active">English</a></li>
                   <li><a href="./pages/pt-br.html">Portuguese</a></li>
                 </ul>
@@ -71,9 +74,9 @@
                   <a
                     href="https://drive.google.com/file/d/1xOBHqqdKkyMcl9QdYAGN6XnMbwY1QJjy/view?usp=sharing"
                     target="_blank"
-                    class="linkBtn"
+                    class="btn-outline"
                   >
-                    Cv
+                    CV
                   </a>
                 </div>
               </li>
@@ -81,71 +84,41 @@
           </div>
 
           <div class="nav__cv">
-            <a href="https://drive.google.com/file/d/1xOBHqqdKkyMcl9QdYAGN6XnMbwY1QJjy/view?usp=sharing" target="_blank" class="linkBtn">
-              Cv
+            <a
+              href="https://drive.google.com/file/d/1xOBHqqdKkyMcl9QdYAGN6XnMbwY1QJjy/view?usp=sharing"
+              target="_blank"
+              class="btn-outline"
+            >
+              CV
             </a>
           </div>
         </div>
       </nav>
 
       <div class="banner">
-        <main class="container">
-          <h1>Welcome to my portfolio</h1>
-          <p>If you are looking for a front-end developer, you have come to the right place.</p>
+        <div id="particles" class="fade-in"></div>
 
-          <!-- DOTS -->
-          <img src="./images/dots.svg" />
-          <img src="./images/dots.svg" />
-        </main>
+        <div class="banner__line fade-in"></div>
+        <img src="./src/assets/banner.png" class="fade-in" />
 
-        <div>
-          <!-- LINES LEFT -->
-          <svg width="603" height="273" viewBox="0 0 603 273" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 1H42.5L132.5 91H265.5L336.5 162H597" stroke="url(#paint0_linear_5_50)" stroke-width="2" />
-            <path d="M6 272H184.149L247.702 219H438.362L483.9 174H603" stroke="url(#paint1_linear_5_50)" stroke-width="2" />
-            <defs>
-              <linearGradient id="paint0_linear_5_50" x1="597" y1="162" x2="-2.70217e-05" y2="162" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#F0A400" />
-                <stop offset="1" stop-color="#F0A400" stop-opacity="0" />
-              </linearGradient>
-              <linearGradient id="paint1_linear_5_50" x1="6" y1="174" x2="603" y2="174" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#F0A400" stop-opacity="0" />
-                <stop offset="1" stop-color="#F0A400" />
-              </linearGradient>
-            </defs>
-          </svg>
+        <div class="container">
+          <h1 class="scale-in">
+            Erick <br />
+            Kuwahara
+          </h1>
+          <span class="fade-up">Front End Developer</span>
 
-          <a href="#about" class="mainBtn">About me</a>
+          <a href="#about" class="btn fade-up">Discover</a>
 
-          <!-- LINES RIGHT -->
-          <svg width="604" height="273" viewBox="0 0 604 273" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M597 272H418.851L355.298 219L164.638 219L119.1 174L-3.38554e-05 174"
-              stroke="url(#paint0_linear_5_194)"
-              stroke-width="2"
-            />
-            <path d="M604 1L560.5 1L470.5 91L337.5 91L266.5 162L6.00037 162" stroke="url(#paint1_linear_5_194)" stroke-width="2" />
-            <defs>
-              <linearGradient id="paint0_linear_5_194" x1="597" y1="174" x2="0" y2="174" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#F0A400" stop-opacity="0" />
-                <stop offset="1" stop-color="#F0A400" />
-              </linearGradient>
-              <linearGradient id="paint1_linear_5_194" x1="604" y1="162" x2="6.00001" y2="162" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#F0A400" stop-opacity="0" />
-                <stop offset="1" stop-color="#F0A400" />
-              </linearGradient>
-            </defs>
-          </svg>
+          <div id="mouse" class="banner__mouse fade-in">
+            <a href="#about"><div class="dot mouse-scroll"></div></a>
+          </div>
         </div>
-      </div>
-
-      <div class="mouse-animation" id="mouse">
-        <a href="#about"><span class="dot"></span></a>
       </div>
     </header>
 
     <!-- SOCIAL -->
-    <div class="social media">
+    <div class="social media slide-from-left">
       <div class="container">
         <ul>
           <li>
@@ -209,34 +182,36 @@
       </div>
     </div>
 
-    <div class="social language">
+    <div class="social language slide-from-right">
       <div class="container">
         <ul>
           <li>
             <a href="./pages/pt-br.html" title="Portuguese"> pt </a>
           </li>
           <li>
-            <a href="./" class="active" title="English"> en </a>
+            <a href="#" class="active" title="English"> en </a>
           </li>
         </ul>
       </div>
     </div>
 
     <!-- ABOUT -->
-    <section id="about">
+    <section id="about" class="about">
       <div class="container">
-        <div class="about__box">
-          <div class="about__img">
-            <img src="./images/profile.jpg" alt="profile image" />
+        <div class="about__description">
+          <div class="about__pic">
+            <img src="./src/assets/profile.jpg" alt="Erick Kuwahara photo" />
+
             <div class="border__top"></div>
             <div class="border__bottom"></div>
           </div>
 
           <div class="about__txt">
-            <div class="title__wrapper">
+            <div class="about__title">
               <h2>About Me</h2>
+
               <svg width="710" height="31" viewBox="0 0 710 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M709.5 2L200 1.5L172 29.5H0" stroke="url(#paint0_linear_50_2)" stroke-width="2" />
+                <path d="M709.5 2L200 1.5L172 29.5H0" stroke="url(#paint0_linear_50_2)" stroke-width="2" class="dash-lines" />
                 <defs>
                   <linearGradient
                     id="paint0_linear_50_2"
@@ -246,51 +221,55 @@
                     y2="16.0002"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#F0A400" />
-                    <stop offset="1" stop-color="#F0A400" stop-opacity="0" />
+                    <stop stop-color="#FFFFFF" />
+                    <stop offset="1" stop-color="#FFFFFF" stop-opacity="0" />
                   </linearGradient>
                 </defs>
               </svg>
             </div>
+
             <p>
-              My name is Erick Kuwahara da Silva, I'm 18 years old, and I'm from São Paulo - Brazil. I discovered the programming field
-              during the COVID-19 pandemic, and every day I'm more amazed by this "world".
+              Based in <span>São Paulo - Brazil</span>, my journey began in 2020. Since then, I have wholeheartedly dedicated myself to
+              constant learning and progress in the field of <span>web development</span> and <span>ux|ui design</span>.
             </p>
             <p>
-              I have been constantly studying and deepening my knowledge in Front End technologies, as well as striving for excellence in
-              <span>User Experience</span> and <span>Web Design</span>.
+              My primary focus lies in <span>Front End Web Development</span>, combining creativity with code to fashion seamless and
+              visually captivating user experiences.
             </p>
             <p>You can find out more about me by checking out my LinkedIn or my CV.</p>
 
-            <div class="links__wrapper">
-              <a href="https://www.linkedin.com/in/erick-kuwahara/" target="_blank" class="mainBtn"> LinkedIn </a>
-              <a href="https://drive.google.com/file/d/1xOBHqqdKkyMcl9QdYAGN6XnMbwY1QJjy/view?usp=sharing" target="_blank" class="mainBtn">
-                Cv
+            <div class="about__links">
+              <a href="https://www.linkedin.com/in/erick-kuwahara/" target="_blank" class="btn"> LinkedIn </a>
+              <a href="https://drive.google.com/file/d/1xOBHqqdKkyMcl9QdYAGN6XnMbwY1QJjy/view?usp=sharing" target="_blank" class="btn">
+                CV
               </a>
             </div>
           </div>
         </div>
+
         <div class="about__skills">
-          <div class="title__wrapper">
+          <div class="about__title">
+            <h2>Skills</h2>
+
             <div>
               <svg width="287" height="34" viewBox="0 0 287 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 1H164L190 27H287" stroke="url(#paint0_linear_75_21)" stroke-width="2" />
-                <path d="M0 7H160L186 33H283" stroke="url(#paint1_linear_75_21)" stroke-width="2" />
+                <path d="M4 1H164L190 27H287" stroke="url(#paint0_linear_75_21)" stroke-width="2" class="dash-lines" />
+                <path d="M0 7H160L186 33H283" stroke="url(#paint1_linear_75_21)" stroke-width="2" class="dash-lines" />
                 <defs>
                   <linearGradient id="paint0_linear_75_21" x1="287" y1="27" x2="4" y2="27" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#F0A400" />
-                    <stop offset="1" stop-color="#F0A400" stop-opacity="0" />
+                    <stop stop-color="#FFFFFF" />
+                    <stop offset="1" stop-color="#FFFFFF" stop-opacity="0" />
                   </linearGradient>
                   <linearGradient id="paint1_linear_75_21" x1="283" y1="33" x2="-2.04419e-06" y2="33" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#F0A400" />
-                    <stop offset="1" stop-color="#F0A400" stop-opacity="0" />
+                    <stop stop-color="#FFFFFF" />
+                    <stop offset="1" stop-color="#FFFFFF" stop-opacity="0" />
                   </linearGradient>
                 </defs>
               </svg>
 
               <svg width="287" height="34" viewBox="0 0 287 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M283 33L123 33L97 7L0 7" stroke="url(#paint0_linear_75_22)" stroke-width="2" />
-                <path d="M287 27L127 27L101 1L4 1" stroke="url(#paint1_linear_75_22)" stroke-width="2" />
+                <path d="M283 33L123 33L97 7L0 7" stroke="url(#paint0_linear_75_22)" stroke-width="2" class="dash-lines" />
+                <path d="M287 27L127 27L101 1L4 1" stroke="url(#paint1_linear_75_22)" stroke-width="2" class="dash-lines" />
                 <defs>
                   <linearGradient
                     id="paint0_linear_75_22"
@@ -300,40 +279,48 @@
                     y2="6.99999"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#F0A400" />
-                    <stop offset="1" stop-color="#F0A400" stop-opacity="0" />
+                    <stop stop-color="#FFFFFF" />
+                    <stop offset="1" stop-color="#FFFFFF" stop-opacity="0" />
                   </linearGradient>
                   <linearGradient id="paint1_linear_75_22" x1="4" y1="0.999966" x2="287" y2="0.999988" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#F0A400" />
-                    <stop offset="1" stop-color="#F0A400" stop-opacity="0" />
+                    <stop stop-color="#FFFFFF" />
+                    <stop offset="1" stop-color="#FFFFFF" stop-opacity="0" />
                   </linearGradient>
                 </defs>
               </svg>
             </div>
-
-            <h2>Skills</h2>
           </div>
-          <div id="keen-slider" class="skills__wrapper keen-slider">
-            <div class="skills_single keen-slider__slide">
-              <img src="./images/logos/html.svg" />
+
+          <div id="keen-slider" class="keen-slider">
+            <div class="keen-slider__slide">
+              <img src="./src/assets/logos/html.svg" />
             </div>
-            <div class="skills_single keen-slider__slide">
-              <img src="./images/logos/css.svg" />
+            <div class="keen-slider__slide">
+              <img src="./src/assets/logos/css.svg" />
             </div>
-            <div class="skills_single keen-slider__slide">
-              <img src="./images/logos/tailwindcss.svg" />
+            <div class="keen-slider__slide">
+              <img src="./src/assets/logos/tailwindcss.svg" />
             </div>
-            <div class="skills_single keen-slider__slide">
-              <img src="./images/logos/js.svg" />
+            <div class="keen-slider__slide">
+              <img src="./src/assets/logos/js.svg" />
             </div>
-            <div class="skills_single keen-slider__slide">
-              <img src="./images/logos/ts.svg" />
+            <div class="keen-slider__slide">
+              <img src="./src/assets/logos/ts.svg" />
             </div>
-            <div class="skills_single keen-slider__slide">
-              <img src="./images/logos/react.svg" />
+            <div class="keen-slider__slide">
+              <img src="./src/assets/logos/react.svg" />
             </div>
-            <div class="skills_single keen-slider__slide">
-              <img src="./images/logos/next.svg" />
+            <div class="keen-slider__slide">
+              <img src="./src/assets/logos/next.svg" />
+            </div>
+            <div class="keen-slider__slide">
+              <img src="./src/assets/logos/jest.svg" />
+            </div>
+            <div class="keen-slider__slide">
+              <img src="./src/assets/logos/cypress.svg" />
+            </div>
+            <div class="keen-slider__slide">
+              <img src="./src/assets/logos/storybook.svg" />
             </div>
           </div>
         </div>
@@ -341,31 +328,32 @@
     </section>
 
     <!-- EXPERIENCES -->
-    <section id="experiences">
+    <section id="experiences" class="experiences">
       <div class="container">
-        <div class="section__title">
+        <div class="experiences__title">
           <h2>Work Experiences</h2>
         </div>
 
         <div class="experiences__box">
           <div class="experiences__line">
             <svg width="16" height="148" viewBox="0 0 16 148" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 148V8" stroke="url(#paint0_linear_74_7)" stroke-width="2" />
+              <path d="M8 148V8" stroke="url(#paint0_linear_74_7)" stroke-width="2" class="dash-lines" />
               <g>
-                <circle cx="8" cy="8" r="4" fill="#F0A400" />
-                <circle cx="8" cy="8" r="8" fill="#F0A400" fill-opacity="0.65" />
+                <circle cx="8" cy="8" r="4" fill="#FFFFFF" />
+                <circle cx="8" cy="8" r="8" fill="#FFFFFF" fill-opacity="0.4" />
               </g>
               <defs>
                 <linearGradient id="paint0_linear_74_7" x1="8" y1="8" x2="8" y2="148" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#F0A400" />
-                  <stop offset="1" stop-color="#F0A400" stop-opacity="0" />
+                  <stop stop-color="#FFFFFF" />
+                  <stop offset="1" stop-color="#FFFFFF" stop-opacity="0" />
                 </linearGradient>
               </defs>
             </svg>
           </div>
+
           <div class="experiences__wrapper">
             <div class="experiences__single">
-              <span>Present</span>
+              <h3>Present</h3>
               <div>
                 <h3>Looking for my first professional experience.</h3>
               </div>
@@ -376,23 +364,23 @@
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects">
+    <section id="projects" class="projects">
       <div class="container">
-        <div class="section__title">
+        <div class="projects__title">
           <h2>Projects</h2>
 
           <div>
             <svg width="834" height="61" viewBox="0 0 834 61" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 20H227L267 60H567" stroke="url(#paint0_linear_25_28)" stroke-width="2" />
-              <path d="M834 41L607 41L567 1L267 1" stroke="url(#paint1_linear_25_28)" stroke-width="2" />
+              <path d="M0 20H227L267 60H567" stroke="url(#paint0_linear_25_28)" stroke-width="2" class="dash-lines" />
+              <path d="M834 41L607 41L567 1L267 1" stroke="url(#paint1_linear_25_28)" stroke-width="2" class="dash-lines" />
               <defs>
                 <linearGradient id="paint0_linear_25_28" x1="567.5" y1="60.4995" x2="0.499999" y2="60.4999" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#F0A400" />
-                  <stop offset="1" stop-color="#F0A400" stop-opacity="0" />
+                  <stop stop-color="#FFFFFF" />
+                  <stop offset="1" stop-color="#FFFFFF" stop-opacity="0" />
                 </linearGradient>
                 <linearGradient id="paint1_linear_25_28" x1="266.5" y1="0.500455" x2="833.5" y2="0.500129" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#F0A400" />
-                  <stop offset="1" stop-color="#F0A400" stop-opacity="0" />
+                  <stop stop-color="#FFFFFF" />
+                  <stop offset="1" stop-color="#FFFFFF" stop-opacity="0" />
                 </linearGradient>
               </defs>
             </svg>
@@ -406,7 +394,7 @@
         </p>
 
         <div class="project__box">
-          <div class="project__single clone">
+          <div class="project__single">
             <div class="project__header">
               <div>
                 <h3>Parcel</h3>
@@ -455,8 +443,7 @@
               </span>
             </div>
           </div>
-
-          <div class="project__single app">
+          <div class="project__single">
             <div class="project__header">
               <div>
                 <h3>Weather App</h3>
@@ -505,8 +492,7 @@
               </span>
             </div>
           </div>
-
-          <div class="project__single app">
+          <div class="project__single">
             <div class="project__header">
               <div>
                 <h3>Quiz</h3>
@@ -555,8 +541,7 @@
               </span>
             </div>
           </div>
-
-          <div class="project__single app">
+          <div class="project__single">
             <div class="project__header">
               <div>
                 <h3>Calculator</h3>
@@ -605,8 +590,7 @@
               </span>
             </div>
           </div>
-
-          <div class="project__single app">
+          <div class="project__single">
             <div class="project__header">
               <div>
                 <h3>Pomodoro</h3>
@@ -655,8 +639,7 @@
               </span>
             </div>
           </div>
-
-          <div class="project__single app">
+          <div class="project__single">
             <div class="project__header">
               <div>
                 <h3>To-Do List</h3>
@@ -705,8 +688,7 @@
               </span>
             </div>
           </div>
-
-          <div class="project__single app">
+          <div class="project__single">
             <div class="project__header">
               <div>
                 <h3>Multi-step Form</h3>
@@ -755,8 +737,7 @@
               </span>
             </div>
           </div>
-
-          <div class="project__single app">
+          <div class="project__single">
             <div class="project__header">
               <div>
                 <h3>Shop</h3>
@@ -805,8 +786,7 @@
               </span>
             </div>
           </div>
-
-          <div class="project__single app">
+          <div class="project__single">
             <div class="project__header">
               <div>
                 <h3>Cycle-X</h3>
@@ -855,8 +835,7 @@
               </span>
             </div>
           </div>
-
-          <div class="project__single app">
+          <div class="project__single">
             <div class="project__header">
               <div>
                 <h3>Health Nexus</h3>
@@ -894,54 +873,63 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact">
+    <section id="contact" class="contact">
       <div class="container">
-        <div class="section__title">
-          <h2>
-            Got a project in mind?<br />
-            Tell me about it.
-          </h2>
-        </div>
+        <h2>
+          Got a project in mind?<br />
+          Tell me about it.
+        </h2>
 
         <div class="contact__box">
           <div>
             <!-- LINES LEFT -->
             <svg width="603" height="273" viewBox="0 0 603 273" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 1H42.5L132.5 91H265.5L336.5 162H597" stroke="url(#paint0_linear_5_50)" stroke-width="2" />
-              <path d="M6 272H184.149L247.702 219H438.362L483.9 174H603" stroke="url(#paint1_linear_5_50)" stroke-width="2" />
+              <path d="M0 1H42.5L132.5 91H265.5L336.5 162H597" stroke="url(#paint0_linear_5_52)" stroke-width="2" class="dash-lines" />
+              <path
+                d="M6 272H184.149L247.702 219H438.362L483.9 174H603"
+                stroke="url(#paint1_linear_5_52)"
+                stroke-width="2"
+                class="dash-lines"
+              />
               <defs>
-                <linearGradient id="paint0_linear_5_50" x1="597" y1="162" x2="-2.70217e-05" y2="162" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#F0A400" />
-                  <stop offset="1" stop-color="#F0A400" stop-opacity="0" />
+                <linearGradient id="paint0_linear_5_52" x1="597" y1="162" x2="-2.70217e-05" y2="162" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FFFFFF" />
+                  <stop offset="1" stop-color="#FFFFFF" stop-opacity="0" />
                 </linearGradient>
-                <linearGradient id="paint1_linear_5_50" x1="6" y1="174" x2="603" y2="174" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#F0A400" stop-opacity="0" />
-                  <stop offset="1" stop-color="#F0A400" />
+                <linearGradient id="paint1_linear_5_52" x1="6" y1="174" x2="603" y2="174" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FFFFFF" stop-opacity="0" />
+                  <stop offset="1" stop-color="#FFFFFF" />
                 </linearGradient>
               </defs>
             </svg>
 
             <div>
-              <a href="https://www.linkedin.com/in/erick-kuwahara/" target="_blank" class="mainBtn"> LinkedIn </a>
-              <a href="mailto:erick.kuwahara79@gmail.com" class="mainBtn"> Email </a>
+              <a href="https://www.linkedin.com/in/erick-kuwahara/" target="_blank" class="btn">LinkedIn</a>
+              <a href="mailto:erick.kuwahara79@gmail.com" class="btn">Email</a>
             </div>
 
             <!-- LINES RIGHT -->
             <svg width="604" height="273" viewBox="0 0 604 273" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M597 272H418.851L355.298 219L164.638 219L119.1 174L-3.38554e-05 174"
-                stroke="url(#paint0_linear_5_194)"
+                stroke="url(#paint0_linear_5_195)"
                 stroke-width="2"
+                class="dash-lines"
               />
-              <path d="M604 1L560.5 1L470.5 91L337.5 91L266.5 162L6.00037 162" stroke="url(#paint1_linear_5_194)" stroke-width="2" />
+              <path
+                d="M604 1L560.5 1L470.5 91L337.5 91L266.5 162L6.00037 162"
+                stroke="url(#paint1_linear_5_195)"
+                stroke-width="2"
+                class="dash-lines"
+              />
               <defs>
-                <linearGradient id="paint0_linear_5_194" x1="597" y1="174" x2="0" y2="174" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#F0A400" stop-opacity="0" />
-                  <stop offset="1" stop-color="#F0A400" />
+                <linearGradient id="paint0_linear_5_195" x1="597" y1="174" x2="0" y2="174" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FFFFFF" stop-opacity="0" />
+                  <stop offset="1" stop-color="#FFFFFF" />
                 </linearGradient>
-                <linearGradient id="paint1_linear_5_194" x1="604" y1="162" x2="6.00001" y2="162" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#F0A400" stop-opacity="0" />
-                  <stop offset="1" stop-color="#F0A400" />
+                <linearGradient id="paint1_linear_5_195" x1="604" y1="162" x2="6.00001" y2="162" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FFFFFF" stop-opacity="0" />
+                  <stop offset="1" stop-color="#FFFFFF" />
                 </linearGradient>
               </defs>
             </svg>
@@ -958,9 +946,11 @@
     </footer>
 
     <!-- SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/1.18.11/tsparticles.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.js"></script>
-    <script src="./js/keen-slider.js"></script>
 
-    <script src="./js/main.js"></script>
+    <script src="./src/js/particles.js"></script>
+    <script src="./src/js/keen-slider.js"></script>
+    <script src="./src/js/main.js"></script>
   </body>
 </html>
