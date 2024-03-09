@@ -669,6 +669,7 @@ header {
   opacity: 0;
 
   font-size: 1.8rem;
+  line-height: 1.3;
 }
 .about.active .about__txt p {
   animation: fade-up 1.6s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
@@ -685,6 +686,7 @@ header {
 
 .about__txt p span {
   font-size: 1.8rem;
+  line-height: 1.3;
   color: var(--primary);
 }
 
