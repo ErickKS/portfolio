@@ -1341,8 +1341,4 @@ footer span {
     grid-template-columns: repeat(3, 1fr);
     gap: 4rem;
   }
-
-  .project__single:last-of-type {
-    display: none;
-  }
 }
